@@ -1,0 +1,24 @@
+		PROBLEM : 151A
+#include<iostream>
+#include<algorithm> //using header file for min() function.
+#include<vector>
+using namespace std;
+
+bool comp(int a, int b){
+    return (a<b);
+}
+int main(){
+    int n,k,l,c,d,p,nl,np;
+    int aD,aS,uDE;//aD is denoting available drinks and aS is for available salts, uDE is for minimum element available for toast
+    cin>>n>>k>>l>>c>>d>>p>>nl>>np;
+    //cout<<n<<k<<l<<c<<d<<p<<nl<<np;
+    aD=k*l; aS=c*d;
+    uDE= min({aD/nl,aS,p/np},comp);
+    /*cout<<uDE<<endl;
+    uDE = min(p,uDE); //saving time and memory
+    //cout<<uDE<<endl;*/
+    //cout<<uDE;
+    cout<<(uDE/n); //finding for individual friend
+    
+    return 0;
+}
