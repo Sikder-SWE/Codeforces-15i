@@ -1,0 +1,20 @@
+			PROBLEM : 677A
+#include<iostream>
+using namespace std;
+
+int main ()
+{
+  
+int N, H, iH;		//n is Number of Friends, H is Height of the Fence, iH is individual Height of these persons i.e Friends
+  int W = 0;			//Declaring width of the road/path to 0 as initial value
+  cin >> N >> H;
+  
+    for (int i = 0; i < N; i++){
+      cin >> iH;
+        if (iH <= H)
+          W += 1;		//incrementing value by 1 if the individual Height less than the Fence Height
+        else
+          W += 2;
+    }
+    cout << W;
+}
